@@ -8,7 +8,7 @@
 
 ## Демо
 
-- **Сайт:** [https://ваш-username.github.io/resume/](https://nelim-dev.github.io/resume/)
+- **Сайт:** [https:///nelim-dev.github.io/resume/](https://nelim-dev.github.io/resume/)
 - **PDF:** [Bagnenko_Nikolay_CV.pdf](Bagnenko_Nikolay_CV.pdf)
 
 ## Стек
