@@ -1,0 +1,290 @@
+/* RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+input, button, textarea, select { font: inherit; }
+
+p, h1, h2, h3 { overflow-wrap: break-word; }
+
+ul, ol { list-style: none; }
+
+a { text-decoration: none; color: inherit; }
+
+/* BASE */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #e8e8e8;
+  background: #141414;
+  padding: 40px 16px;
+}
+
+header, main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  background: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  padding: 28px 24px;
+  margin-bottom: 12px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 6px;
+}
+
+header p{
+  font-size: 13px;
+  color: #d0d0d0;
+}
+
+header h1 + p {
+  font-size: 13px;
+  color: #d0d0d0;
+
+}
+
+header ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px 24px;
+}
+
+header ul li { margin-bottom: 2px; }
+
+header a {
+  color: #d0d0d0;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+header a:hover { border-bottom-color: #d0d0d0; }
+
+/* SECTIONS */
+main section {
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 12px;
+}
+
+main section:last-child { margin-bottom: 0; }
+
+main section h2 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #d4a574;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+/* CONTENT */
+main section p,
+main section li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+main section p:last-child,
+main section li:last-child { margin-bottom: 0; }
+
+main section strong {
+  color: #f0f0f0;
+  font-weight: 600;
+}
+
+/* PROJECTS */
+main section article {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid #2a2a2a;
+}
+
+main section article:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+main section article h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 6px;
+}
+
+main section article p { margin-bottom: 6px; }
+
+main section article p:last-child { margin-bottom: 0; }
+
+/* LINKS */
+main a {
+  color: #d0d0d0;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+main a:hover { border-bottom-color: #d4a574; }
+
+main section article p a {
+  font-size: 13px;
+  color: #909090;
+}
+
+main section article p a:hover { color: #d4a574; }
+
+#conference li::before{
+  content: "—";
+  margin-right: 10px;
+}
+
+/* PRINT — светлая тема для PDF */
+@media print {
+  @page {
+    size: A4;
+    margin: 8mm;
+  }
+
+  body {
+    background: #ffffff;
+    color: #1a1a1a;
+    padding: 0;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  header, main { max-width: 100%; }
+
+  /* HEADER */
+  header {
+    background: #f5f5f5;
+    border: 1px solid #bdb8b8;
+    padding: 6px 6px;
+    border-radius: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  header h1 {
+    font-size: 13pt;
+    color: #1a1a1a;
+    margin-bottom: 0px;
+  }
+
+    header h2 {
+    font-size: 11pt;
+    color: #1a1a1a;
+  }
+
+  header p{
+    font-size: 9;
+    margin-bottom: 0px;
+  }
+
+  header p,
+  header li {
+    color: #555555;
+  }
+
+  header h1 + p {
+    font-size: 10pt;
+    color: #333333;
+    margin-bottom: 0px;
+  }
+
+  header a {
+    color: #1a1a1a;
+    border-bottom: 1px solid #b0b0b0;
+  }
+
+  /* SECTIONS — разрывы РАЗРЕШЕНЫ */
+  main section {
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    padding: 5px 5px;
+    margin-bottom: 6px;
+    border-radius: 0;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  main section h2 {
+    font-size: 10pt;
+    color: #8a5a2b;
+    margin-bottom: 0px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  main section p,
+  main section li {
+    color: #1a1a1a;
+    font-size: 9pt;
+    margin-bottom: 3px;
+    orphans: 2;
+    widows: 2;
+  }
+
+  main section strong {
+    color: #1a1a1a;
+  }
+
+  /* PROJECTS — тоже разрешаем разрывы */
+  main section article {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 8px;
+    margin-top: 8px;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  main section article:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  main section article h3 {
+    font-size: 9pt;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  main section article p {
+    font-size: 9pt;
+    margin-bottom: 3px;
+  }
+
+  /* LINKS */
+  main a {
+    color: #1a1a1a;
+    border-bottom: 1px solid #b0b0b0;
+  }
+
+  main section article p a {
+    color: #555555;
+  }
+}
