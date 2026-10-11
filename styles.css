@@ -38,6 +38,23 @@ header, main {
   margin: 0 auto;
 }
 
+.download-btn {
+  display: inline-block;
+  margin-left: auto;
+  padding: 8px 12px;
+  background: #d4a574;
+  color: #141414;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background: #e0b88a;
+}
+
 /* HEADER */
 header {
   background: #1e1e1e;
@@ -48,12 +65,13 @@ header {
 }
 
 header h1 {
+  display: flex;
   font-size: 24px;
   font-weight: 700;
   color: #f5f5f5;
   margin-bottom: 6px;
 }
-
+header bu
 header p{
   font-size: 13px;
   color: #d0d0d0;
@@ -166,6 +184,9 @@ main section article p a:hover { color: #d4a574; }
     margin: 8mm;
   }
 
+  .download-btn{
+    display: none;
+  }
   body {
     background: #ffffff;
     color: #1a1a1a;
